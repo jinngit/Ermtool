@@ -1,0 +1,27 @@
+CREATE TABLE ${table.physicalName} (
+#foreach($column in $table.columnList)
+  ${column.physicalName}　${column.typeInfo}${column.notNullInfo}${column.defaultValueInfo}#if($velocityHasNext),
+#elseif(${table.primaryKeyList.size()} > 0)
+,
+  PRIMARY KEY(#foreach($keyName in $table.primaryKeyList)
+${keyName}#if($velocityHasNext),#end
+#end
+)
+#end
+#end
+);
+
+COMMENT ON TABLE ${table.physicalName} IS '${table.logicalName}';
+
+#foreach($column in $table.columnList)
+COMMENT ON COLUMN ${column.physicalName} IS '${column.logicalName}';
+#end
+
+#foreach($index in $table.indexList)
+CREATE #if($index.unique)UNIQUE #end
+INDEX ${table.physicalName}_${index.name}
+  ON ${table.physicalName}(#foreach($columnName in $index.columnNameList)
+${columnName}#if($velocityHasNext),#end
+#end
+);
+#end

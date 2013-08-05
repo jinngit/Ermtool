@@ -1,0 +1,56 @@
+package ${config.java_file.package_name};
+
+#if(${config.java_file.imports})
+#foreach($import in $config.java_file.imports)
+import ${import};
+#end
+#end
+
+/**
+ * ${table.physicalName} 【${table.logicalName}】
+ * ${table.javaDescription}
+ *
+ * @author ${config.author}
+ */
+public class ${table.className} #if(${config.java_file.super_class} && ${config.java_file.super_class} != "")extends ${config.java_file.super_class} #end
+{
+/* SQL
+${table.selectSql}
+
+${table.insertSql}
+
+${table.updateSql}
+*/
+
+#foreach($column in $table.columnList)
+	private ${column.javaType} ${column.javaPhysicalName};
+#end
+
+#foreach($column in $table.columnList)
+	/**
+	 * ${column.physicalName} 【${column.logicalName}】の取得<br>
+	 * 【型】 ${column.typeInfo}#if(${column.javaDescription} != "")<br>
+	 * ${column.javaDescription}
+#end
+	 * 
+	 * @return ${column.javaPhysicalName} 【${column.logicalName}】
+	 */
+	public ${column.javaType} ${column.getter}() {
+		return ${column.javaPhysicalName};
+	}
+
+	/**
+	 * ${column.physicalName} 【${column.logicalName}】のセット<br>
+	 * 【型】 ${column.typeInfo}#if(${column.javaDescription} != "")<br>
+	 * ${column.javaDescription}
+#end
+	 * 
+	 * @param ${column.javaPhysicalName}
+	 *             【${column.logicalName}】
+	 */
+	public void ${column.setter}(${column.javaType} ${column.javaPhysicalName}) {
+		this.${column.javaPhysicalName} = ${column.javaPhysicalName};
+	}
+
+#end
+}
