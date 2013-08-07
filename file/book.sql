@@ -17,6 +17,8 @@ COMMENT ON COLUMN book_type IS '書籍種別';
 COMMENT ON COLUMN insert_datetime IS '登録日時';
 COMMENT ON COLUMN update_datetime IS '更新登録日時';
 
+CREATE UNIQUE INDEX book_price ON book(price);
+
 CREATE UNIQUE INDEX book_ui1
   ON book(book_name,book_id);
 CREATE INDEX book_ni1

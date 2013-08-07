@@ -17,6 +17,11 @@ COMMENT ON TABLE ${table.physicalName} IS '${table.logicalName}';
 COMMENT ON COLUMN ${column.physicalName} IS '${column.logicalName}';
 #end
 
+#foreach($column in $table.columnList)
+#if(${column.columnUnique})CREATE UNIQUE INDEX ${table.physicalName}_${column.uniqueKeyName} ON ${table.physicalName}(${column.physicalName});
+#end
+#end
+
 #foreach($index in $table.indexList)
 CREATE #if($index.unique)UNIQUE #end
 INDEX ${table.physicalName}_${index.name}

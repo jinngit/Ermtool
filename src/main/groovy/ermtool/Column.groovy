@@ -63,10 +63,14 @@ class Column {
 	}
 
 	public String getUniqueKeyInfo() {
-		if (uniqueKey) {
+		if (uniqueKey && uniqueKeyName == "") {
 			return " UNIQUE"
 		}
 		return ""
+	}
+
+	public boolean isColumnUnique() {
+		return uniqueKey && uniqueKeyName != ""
 	}
 
 	public String getNotNullInfo() {

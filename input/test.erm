@@ -168,7 +168,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2013-07-26 14:44:13</creation_date>
-			<updated_date>2013-08-07 20:34:22</updated_date>
+			<updated_date>2013-08-07 23:08:22</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -374,7 +374,7 @@
 					<word_id>4</word_id>
 					<id>4</id>
 					<description></description>
-					<unique_key_name></unique_key_name>
+					<unique_key_name>price</unique_key_name>
 					<logical_name></logical_name>
 					<physical_name></physical_name>
 					<type>integer</type>
@@ -384,7 +384,7 @@
 					<foreign_key>false</foreign_key>
 					<not_null>false</not_null>
 					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
+					<unique_key>true</unique_key>
 					<character_set></character_set>
 					<collation></collation>
 					<sequence>
