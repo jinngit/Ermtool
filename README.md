@@ -18,7 +18,7 @@ TODO
 TODO
 
 # 更新履歴
-## 0.1.1（2031年8月6日）
+## 0.1.1（2013年8月6日）
 * 機能追加
  - 個別カラムのUNIQUE制約の実装
  - TIMESTAMPは「timestamp with time zone」だけでなく「timestamp」にも対応させる
