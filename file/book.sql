@@ -1,10 +1,10 @@
-CREATE TABLE book (
-  book_id　INT,
-  book_name　VARCHAR(80) UNIQUE,
-  price　INT NOT NULL DEFAULT 0,
-  book_type　CHAR(1) NOT NULL,
-  insert_datetime　TIMESTAMP WITH TIME ZONE NOT NULL,
-  update_datetime　TIMESTAMP WITH TIME ZONE NOT NULL,
+CREATE TABLE book(
+  book_id INT,
+  book_name VARCHAR(80) UNIQUE,
+  price INT NOT NULL DEFAULT 0,
+  book_type CHAR(1) NOT NULL,
+  insert_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
+  update_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
   PRIMARY KEY(book_id)
 );
 

@@ -1,6 +1,6 @@
 CREATE TABLE ${table.physicalName}(
 #foreach($column in $table.columnList)
-  ${column.physicalName}　${column.typeInfo}${column.uniqueKeyInfo}${column.notNullInfo}${column.defaultValueInfo}#if($velocityHasNext),
+  ${column.physicalName} ${column.typeInfo}${column.uniqueKeyInfo}${column.notNullInfo}${column.defaultValueInfo}#if($velocityHasNext),
 #elseif(${table.primaryKeyList.size()} > 0)
 ,
   PRIMARY KEY(#foreach($keyName in $table.primaryKeyList)
