@@ -5,7 +5,7 @@ CREATE TABLE book(
   book_type CHAR(1) NOT NULL,
   insert_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
   update_datetime TIMESTAMP NOT NULL,
-  PRIMARY KEY(book_id)
+  CONSTRAINT pk_book PRIMARY KEY(book_id)
 );
 
 COMMENT ON TABLE book IS '書籍マスタ';

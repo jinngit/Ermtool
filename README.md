@@ -23,6 +23,7 @@ TODO
  - 個別カラムのUNIQUE制約の実装
  - TIMESTAMPは「timestamp with time zone」だけでなく「timestamp」にも対応させる
  - INTEGER型はINTではなくINTEGERで出力する
+ - PRIMARY KEYにはCONSTRAINTで名前をつける（pk_テーブル名）
 * バグ
  - table.vmに全角スペースが入っていた（半角に修正）
 

@@ -3,7 +3,7 @@ CREATE TABLE ${table.physicalName}(
   ${column.physicalName} ${column.typeInfo}${column.uniqueKeyInfo}${column.notNullInfo}${column.defaultValueInfo}#if($velocityHasNext),
 #elseif(${table.primaryKeyList.size()} > 0)
 ,
-  PRIMARY KEY(#foreach($keyName in $table.primaryKeyList)
+  CONSTRAINT pk_${table.physicalName} PRIMARY KEY(#foreach($keyName in $table.primaryKeyList)
 ${keyName}#if($velocityHasNext),#end
 #end
 )
