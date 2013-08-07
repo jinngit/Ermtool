@@ -33,7 +33,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_id 【書籍ID】の取得<br>
-	 * 【型】 INT	 * 
+	 * 【型】 INTEGER	 * 
 	 * @return BookId 【書籍ID】
 	 */
 	public Integer getBookId() {
@@ -42,7 +42,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_id 【書籍ID】のセット<br>
-	 * 【型】 INT	 * 
+	 * 【型】 INTEGER	 * 
 	 * @param BookId
 	 *             【書籍ID】
 	 */
@@ -71,7 +71,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * price 【価格】の取得<br>
-	 * 【型】 INT	 * 
+	 * 【型】 INTEGER	 * 
 	 * @return Price 【価格】
 	 */
 	public Integer getPrice() {
@@ -80,7 +80,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * price 【価格】のセット<br>
-	 * 【型】 INT	 * 
+	 * 【型】 INTEGER	 * 
 	 * @param Price
 	 *             【価格】
 	 */

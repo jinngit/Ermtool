@@ -1,7 +1,7 @@
 CREATE TABLE book(
-  book_id INT,
+  book_id INTEGER,
   book_name VARCHAR(80) UNIQUE,
-  price INT NOT NULL DEFAULT 0,
+  price INTEGER NOT NULL DEFAULT 0,
   book_type CHAR(1) NOT NULL,
   insert_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
   update_datetime TIMESTAMP NOT NULL,
