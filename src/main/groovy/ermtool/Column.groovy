@@ -11,6 +11,8 @@ class Column {
 	def description
 	def length
 	def notNull
+	def uniqueKey
+	def uniqueKeyName
 	// 扱いがちょっと微妙なの文字列にしておく
 	String defaultValue
 
@@ -23,6 +25,8 @@ class Column {
 		description = column.description.text()
 		length = column.length.text()
 		notNull = (column.not_null.text() == "true")
+		uniqueKey = (column.unique_key.text() == "true")
+		uniqueKeyName = column.unique_key_name.text()
 		if (column.default_value.text() != "") {
 			defaultValue = column.default_value.text()
 		}
@@ -54,6 +58,13 @@ class Column {
 			}
 		}
 		return typeName
+	}
+
+	public String getUniqueKeyInfo() {
+		if (uniqueKey) {
+			return " UNIQUE"
+		}
+		return ""
 	}
 
 	public String getNotNullInfo() {
