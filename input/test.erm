@@ -168,7 +168,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2013-07-26 14:44:13</creation_date>
-			<updated_date>2013-08-06 21:40:47</updated_date>
+			<updated_date>2013-08-07 20:34:22</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -278,7 +278,7 @@
 			<description></description>
 			<logical_name>更新登録日時</logical_name>
 			<physical_name>update_datetime</physical_name>
-			<type>timestamp with time zone</type>
+			<type>timestamp</type>
 		</word>
 	</dictionary>
 	<tablespace_set>
@@ -533,7 +533,7 @@
 						<unique_key_name></unique_key_name>
 						<logical_name></logical_name>
 						<physical_name></physical_name>
-						<type>timestamp with time zone</type>
+						<type>timestamp</type>
 						<constraint></constraint>
 						<default_value></default_value>
 						<auto_increment>false</auto_increment>

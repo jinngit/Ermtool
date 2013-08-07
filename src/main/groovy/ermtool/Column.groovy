@@ -40,7 +40,9 @@ class Column {
 		description = dictColumn.description
 	}
 
-	private final def TYPE_MAP = ["integer" : "INT", "date": "DATE", "timestamp with time zone": "TIMESTAMP WITH TIME ZONE"]
+	private final def TYPE_MAP = ["integer" : "INT",
+		"date": "DATE", "timestamp with time zone": "TIMESTAMP WITH TIME ZONE",
+		"timestamp": "TIMESTAMP"]
 	private final def TYPE_STRING_MAP = new HashSet([
 		"char",
 		"char(n)",
@@ -119,6 +121,7 @@ class Column {
 
 	private final def JAVA_TYPE_MAP = [
 		"integer" : "Integer", "date": "Date", "timestamp with time zone": "Timestamp",
+		"timestamp": "Timestamp",
 		"character": "String", "character(n)": "String",
 		"varchar":"String", "varchar(n)": "String"]
 

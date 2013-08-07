@@ -4,7 +4,7 @@ CREATE TABLE book(
   price INT NOT NULL DEFAULT 0,
   book_type CHAR(1) NOT NULL,
   insert_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
-  update_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
+  update_datetime TIMESTAMP NOT NULL,
   PRIMARY KEY(book_id)
 );
 

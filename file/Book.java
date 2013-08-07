@@ -136,7 +136,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * update_datetime 【更新登録日時】の取得<br>
-	 * 【型】 TIMESTAMP WITH TIME ZONE	 * 
+	 * 【型】 TIMESTAMP	 * 
 	 * @return UpdateDatetime 【更新登録日時】
 	 */
 	public Timestamp getUpdateDatetime() {
@@ -145,7 +145,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * update_datetime 【更新登録日時】のセット<br>
-	 * 【型】 TIMESTAMP WITH TIME ZONE	 * 
+	 * 【型】 TIMESTAMP	 * 
 	 * @param UpdateDatetime
 	 *             【更新登録日時】
 	 */
