@@ -29,7 +29,9 @@ ${table.updateSql}
 #foreach($column in $table.columnList)
 	/**
 	 * ${column.physicalName} 【${column.logicalName}】の取得<br>
-	 * 【型】 ${column.typeInfo}#if(${column.javaDescription} != "")<br>
+	 * 【型】 ${column.typeInfo}
+#if(${column.javaDescription} != "")
+	 *
 	 * ${column.javaDescription}
 #end
 	 * 
@@ -41,7 +43,9 @@ ${table.updateSql}
 
 	/**
 	 * ${column.physicalName} 【${column.logicalName}】のセット<br>
-	 * 【型】 ${column.typeInfo}#if(${column.javaDescription} != "")<br>
+	 * 【型】 ${column.typeInfo}
+#if(${column.javaDescription} != "")
+	 *
 	 * ${column.javaDescription}
 #end
 	 * 

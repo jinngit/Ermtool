@@ -33,7 +33,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_id 【書籍ID】の取得<br>
-	 * 【型】 INTEGER	 * 
+	 * 【型】 INTEGER
+	 * 
 	 * @return BookId 【書籍ID】
 	 */
 	public Integer getBookId() {
@@ -42,7 +43,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_id 【書籍ID】のセット<br>
-	 * 【型】 INTEGER	 * 
+	 * 【型】 INTEGER
+	 * 
 	 * @param BookId
 	 *             【書籍ID】
 	 */
@@ -52,7 +54,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_name 【書名】の取得<br>
-	 * 【型】 VARCHAR(80)	 * 
+	 * 【型】 VARCHAR(80)
+	 * 
 	 * @return BookName 【書名】
 	 */
 	public String getBookName() {
@@ -61,7 +64,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_name 【書名】のセット<br>
-	 * 【型】 VARCHAR(80)	 * 
+	 * 【型】 VARCHAR(80)
+	 * 
 	 * @param BookName
 	 *             【書名】
 	 */
@@ -71,7 +75,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * price 【価格】の取得<br>
-	 * 【型】 INTEGER	 * 
+	 * 【型】 INTEGER
+	 * 
 	 * @return Price 【価格】
 	 */
 	public Integer getPrice() {
@@ -80,7 +85,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * price 【価格】のセット<br>
-	 * 【型】 INTEGER	 * 
+	 * 【型】 INTEGER
+	 * 
 	 * @param Price
 	 *             【価格】
 	 */
@@ -90,7 +96,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_type 【書籍種別】の取得<br>
-	 * 【型】 CHAR(1)<br>
+	 * 【型】 CHAR(1)
+	 *
 	 * 1: 小説<br>
 	 * 2: コミック<br>
 	 * 3: 実用書
@@ -103,7 +110,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * book_type 【書籍種別】のセット<br>
-	 * 【型】 CHAR(1)<br>
+	 * 【型】 CHAR(1)
+	 *
 	 * 1: 小説<br>
 	 * 2: コミック<br>
 	 * 3: 実用書
@@ -117,7 +125,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * insert_datetime 【登録日時】の取得<br>
-	 * 【型】 TIMESTAMP WITH TIME ZONE	 * 
+	 * 【型】 TIMESTAMP WITH TIME ZONE
+	 * 
 	 * @return InsertDatetime 【登録日時】
 	 */
 	public Timestamp getInsertDatetime() {
@@ -126,7 +135,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * insert_datetime 【登録日時】のセット<br>
-	 * 【型】 TIMESTAMP WITH TIME ZONE	 * 
+	 * 【型】 TIMESTAMP WITH TIME ZONE
+	 * 
 	 * @param InsertDatetime
 	 *             【登録日時】
 	 */
@@ -136,7 +146,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * update_datetime 【更新登録日時】の取得<br>
-	 * 【型】 TIMESTAMP	 * 
+	 * 【型】 TIMESTAMP
+	 * 
 	 * @return UpdateDatetime 【更新登録日時】
 	 */
 	public Timestamp getUpdateDatetime() {
@@ -145,7 +156,8 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 
 	/**
 	 * update_datetime 【更新登録日時】のセット<br>
-	 * 【型】 TIMESTAMP	 * 
+	 * 【型】 TIMESTAMP
+	 * 
 	 * @param UpdateDatetime
 	 *             【更新登録日時】
 	 */
