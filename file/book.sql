@@ -10,12 +10,12 @@ CREATE TABLE book(
 
 COMMENT ON TABLE book IS '書籍マスタ';
 
-COMMENT ON COLUMN book_id IS '書籍ID';
-COMMENT ON COLUMN book_name IS '書名';
-COMMENT ON COLUMN price IS '価格';
-COMMENT ON COLUMN book_type IS '書籍種別';
-COMMENT ON COLUMN insert_datetime IS '登録日時';
-COMMENT ON COLUMN update_datetime IS '更新登録日時';
+COMMENT ON COLUMN book.book_id IS '書籍ID';
+COMMENT ON COLUMN book.book_name IS '書名';
+COMMENT ON COLUMN book.price IS '価格';
+COMMENT ON COLUMN book.book_type IS '書籍種別';
+COMMENT ON COLUMN book.insert_datetime IS '登録日時';
+COMMENT ON COLUMN book.update_datetime IS '更新登録日時';
 
 CREATE UNIQUE INDEX book_price ON book(price);
 

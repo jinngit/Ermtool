@@ -23,6 +23,7 @@ TODO
  - JavaクラスにserialVersionUIDを付加するかを設定できるようにする
 * バグ
  - columnにdescriptionがある場合に、JavaDocに不要な「*」が入る
+ - COMMENT ON COLUMNにテーブル名がないため、エラーになる
 
 ## 0.1.1（2013年8月6日）
 * 機能追加
