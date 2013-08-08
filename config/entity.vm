@@ -21,6 +21,10 @@ ${table.insertSql}
 
 ${table.updateSql}
 */
+#if(${config.java_file.isSerialVersionUID})
+
+	private static final long serialVersionUID = 1L;
+#end
 
 #foreach($column in $table.columnList)
 	private ${column.javaType} ${column.javaPhysicalName};

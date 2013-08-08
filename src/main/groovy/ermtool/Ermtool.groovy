@@ -34,7 +34,6 @@ class Ermtool {
 	}
 
 	public void output(config, target, output) {
-
 		//Velocityの初期化
 		Velocity.init();
 		//Velocityコンテキストに値を設定

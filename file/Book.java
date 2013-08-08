@@ -24,6 +24,8 @@ UPDATE book
 SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=?;
 */
 
+	private static final long serialVersionUID = 1L;
+
 	private Integer BookId;
 	private String BookName;
 	private Integer Price;

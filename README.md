@@ -19,6 +19,8 @@ TODO
 
 # 更新履歴
 ## 0.1.2（2013年8月7日）
+# 機能追加
+ - JavaクラスにserialVersionUIDを付加するかを設定できるようにする
 * バグ
  - columnにdescriptionがある場合に、JavaDocに不要な「*」が入る
 
