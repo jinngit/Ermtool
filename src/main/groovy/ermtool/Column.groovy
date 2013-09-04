@@ -112,7 +112,7 @@ class Column {
 	}
 
 	public String getJavaPhysicalName() {
-		return CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, physicalName)
+		return CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, physicalName)
 	}
 
 	public String getGetter() {
