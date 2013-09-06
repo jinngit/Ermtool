@@ -3,6 +3,9 @@ CREATE TABLE book(
   book_name VARCHAR(80) UNIQUE,
   price INTEGER NOT NULL DEFAULT 0,
   book_type CHAR(1) NOT NULL,
+  want_flag NUMERIC(1) NOT NULL,
+  length9 NUMERIC(9) NOT NULL,
+  length10 NUMERIC(10) NOT NULL,
   insert_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
   update_datetime TIMESTAMP NOT NULL,
   CONSTRAINT pk_book PRIMARY KEY(book_id)
@@ -14,6 +17,9 @@ COMMENT ON COLUMN book.book_id IS '書籍ID';
 COMMENT ON COLUMN book.book_name IS '書名';
 COMMENT ON COLUMN book.price IS '価格';
 COMMENT ON COLUMN book.book_type IS '書籍種別';
+COMMENT ON COLUMN book.want_flag IS '購入予定フラグ';
+COMMENT ON COLUMN book.length9 IS '長さ9';
+COMMENT ON COLUMN book.length10 IS '長さ10';
 COMMENT ON COLUMN book.insert_datetime IS '登録日時';
 COMMENT ON COLUMN book.update_datetime IS '更新登録日時';
 

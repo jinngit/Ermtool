@@ -57,6 +57,8 @@ class Column {
 				typeName = "VARCHAR(${length})"
 			} else if (type == "character(n)") {
 				typeName = "CHAR(${length})"
+			} else if (type == "numeric(p)") {
+				typeName = "NUMERIC(${length})"
 			}
 		}
 		return typeName
@@ -130,7 +132,17 @@ class Column {
 		"varchar":"String", "varchar(n)": "String"]
 
 	public String getJavaType() {
-		return JAVA_TYPE_MAP[type]
+		String javaType = JAVA_TYPE_MAP[type]
+		if (javaType == null) {
+			if (type == "numeric(p)") {
+				if (Integer.parseInt(length) < 10) {
+					javaType = "Integer"
+				} else {
+					javaType = "Long"
+				}
+			}
+		}
+		return javaType
 	}
 
 	public String getJavaDescription() {

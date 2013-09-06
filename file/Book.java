@@ -14,14 +14,14 @@ import aaa;
  */
 public class Book extends BaseClass {
 /* SQL
-SELECT book_id,book_name,price,book_type,insert_datetime,update_datetime
+SELECT book_id,book_name,price,book_type,want_flag,length9,length10,insert_datetime,update_datetime
 FROM book;
 
-INSERT INTO book(book_id,book_name,price,book_type,insert_datetime,update_datetime)
-VALUES(?,?,?,?,?,?);
+INSERT INTO book(book_id,book_name,price,book_type,want_flag,length9,length10,insert_datetime,update_datetime)
+VALUES(?,?,?,?,?,?,?,?,?);
 
 UPDATE book
-SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=?;
+SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,insert_datetime=?,update_datetime=?;
 */
 
 	private static final long serialVersionUID = 1L;
@@ -30,6 +30,9 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 	private String bookName;
 	private Integer price;
 	private String bookType;
+	private Integer wantFlag;
+	private Integer length9;
+	private Long length10;
 	private Timestamp insertDatetime;
 	private Timestamp updateDatetime;
 
@@ -123,6 +126,75 @@ SET book_id=?,book_name=?,price=?,book_type=?,insert_datetime=?,update_datetime=
 	 */
 	public void setBookType(String bookType) {
 		this.bookType = bookType;
+	}
+
+	/**
+	 * want_flag 【購入予定フラグ】の取得<br>
+	 * 【型】 NUMERIC(1)
+	 *
+	 * 1: 購入予定<br>
+	 * 0: 購入予定なし
+	 * 
+	 * @return wantFlag 【購入予定フラグ】
+	 */
+	public Integer getWantFlag() {
+		return wantFlag;
+	}
+
+	/**
+	 * want_flag 【購入予定フラグ】のセット<br>
+	 * 【型】 NUMERIC(1)
+	 *
+	 * 1: 購入予定<br>
+	 * 0: 購入予定なし
+	 * 
+	 * @param wantFlag
+	 *             【購入予定フラグ】
+	 */
+	public void setWantFlag(Integer wantFlag) {
+		this.wantFlag = wantFlag;
+	}
+
+	/**
+	 * length9 【長さ9】の取得<br>
+	 * 【型】 NUMERIC(9)
+	 * 
+	 * @return length9 【長さ9】
+	 */
+	public Integer getLength9() {
+		return length9;
+	}
+
+	/**
+	 * length9 【長さ9】のセット<br>
+	 * 【型】 NUMERIC(9)
+	 * 
+	 * @param length9
+	 *             【長さ9】
+	 */
+	public void setLength9(Integer length9) {
+		this.length9 = length9;
+	}
+
+	/**
+	 * length10 【長さ10】の取得<br>
+	 * 【型】 NUMERIC(10)
+	 * 
+	 * @return length10 【長さ10】
+	 */
+	public Long getLength10() {
+		return length10;
+	}
+
+	/**
+	 * length10 【長さ10】のセット<br>
+	 * 【型】 NUMERIC(10)
+	 * 
+	 * @param length10
+	 *             【長さ10】
+	 */
+	public void setLength10(Long length10) {
+		this.length10 = length10;
 	}
 
 	/**
