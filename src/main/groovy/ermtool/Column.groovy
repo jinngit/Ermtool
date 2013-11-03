@@ -76,7 +76,7 @@ class Column {
 	}
 
 	public String getNotNullInfo() {
-		if (!notNull) {
+		if (notNull) {
 			return " NOT NULL"
 		}
 
@@ -99,7 +99,7 @@ class Column {
 	public String getColumnInfo() {
 		def typeName = getTypeInfo()
 		def columnInfo = "${physicalName} ${typeName}"
-		if (!notNull) {
+		if (notNull) {
 			columnInfo = columnInfo + " NOT NULL"
 		}
 		if (defaultValue != null) {

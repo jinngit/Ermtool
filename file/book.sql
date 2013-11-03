@@ -1,13 +1,13 @@
 CREATE TABLE book(
-  book_id INTEGER,
-  book_name VARCHAR(80) UNIQUE,
-  price INTEGER NOT NULL DEFAULT 0,
-  book_type CHAR(1) NOT NULL,
-  want_flag NUMERIC(1) NOT NULL,
-  length9 NUMERIC(9) NOT NULL,
-  length10 NUMERIC(10) NOT NULL,
-  insert_datetime TIMESTAMP WITH TIME ZONE NOT NULL,
-  update_datetime TIMESTAMP NOT NULL,
+  book_id INTEGER NOT NULL,
+  book_name VARCHAR(80) UNIQUE NOT NULL,
+  price INTEGER DEFAULT 0,
+  book_type CHAR(1),
+  want_flag NUMERIC(1),
+  length9 NUMERIC(9),
+  length10 NUMERIC(10),
+  insert_datetime TIMESTAMP WITH TIME ZONE,
+  update_datetime TIMESTAMP,
   CONSTRAINT pk_book PRIMARY KEY(book_id)
 );
 
