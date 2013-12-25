@@ -6,6 +6,7 @@ CREATE TABLE book(
   want_flag NUMERIC(1),
   length9 NUMERIC(9),
   length10 NUMERIC(10),
+  numeric41 NUMERIC(4,1),
   insert_datetime TIMESTAMP WITH TIME ZONE,
   update_datetime TIMESTAMP,
   CONSTRAINT pk_book PRIMARY KEY(book_id)
@@ -20,6 +21,7 @@ COMMENT ON COLUMN book.book_type IS '書籍種別';
 COMMENT ON COLUMN book.want_flag IS '購入予定フラグ';
 COMMENT ON COLUMN book.length9 IS '長さ9';
 COMMENT ON COLUMN book.length10 IS '長さ10';
+COMMENT ON COLUMN book.numeric41 IS '小数';
 COMMENT ON COLUMN book.insert_datetime IS '登録日時';
 COMMENT ON COLUMN book.update_datetime IS '更新登録日時';
 

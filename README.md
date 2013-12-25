@@ -1,4 +1,6 @@
-# 概要
+# Ermtool
+
+## 概要
 [ERMaster](http://ermaster.sourceforge.net/index_ja.html)で作成したermファイルからDDL文、JavaのDtoを作成するツールです。
 ERMasterからも同様のことができますが、フォーマットを調整したいためvelocityによりテンプレートを変更できるようにしています。
 
@@ -8,7 +10,7 @@ MIT
 ## 使用ライブラリー
 付属のcommons-cli、velocity、guavaについては各ライブラリーのライセンス通りです。LICENSEフォルダに各ライブラリーのライセンスを明示しています。
 
-# 使い方
+## 使い方
 ## Ermtoolで使用するデータ
 ### テーブル
 テーブル情報のタブごとに以下の制限があります。
@@ -18,6 +20,12 @@ TODO
 TODO
 
 ## 更新履歴
+### 0.2.0（2013年11月4日）
+* 機能追加
+ - numeric(p,s)対応
+* バグ
+ - NOT NULLの判断が逆になっていた。
+
 ### 0.1.4（2013年9月6日）
 * 機能追加
  - numeric(p)対応

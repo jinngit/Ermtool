@@ -10,6 +10,7 @@ class Column {
 	def type
 	def description
 	def length
+	def decimal
 	def notNull
 	def uniqueKey
 	def uniqueKeyName
@@ -24,6 +25,7 @@ class Column {
 		type = column.type.text()
 		description = column.description.text()
 		length = column.length.text()
+		decimal = column.decimal.text()
 		notNull = (column.not_null.text() == "true")
 		uniqueKey = (column.unique_key.text() == "true")
 		uniqueKeyName = column.unique_key_name.text()
@@ -37,6 +39,7 @@ class Column {
 		physicalName = dictColumn.physicalName
 		type = dictColumn.type
 		length = dictColumn.length
+		decimal = dictColumn.decimal
 		description = dictColumn.description
 	}
 
@@ -59,6 +62,8 @@ class Column {
 				typeName = "CHAR(${length})"
 			} else if (type == "numeric(p)") {
 				typeName = "NUMERIC(${length})"
+			} else if (type == "numeric(p,s)") {
+				typeName = "NUMERIC(${length},${decimal})"
 			}
 		}
 		return typeName
@@ -140,6 +145,8 @@ class Column {
 				} else {
 					javaType = "Long"
 				}
+			} else if (type == "numeric(p,s)") {
+				javaType = "BigDecimal"
 			}
 		}
 		return javaType

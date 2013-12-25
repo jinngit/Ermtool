@@ -14,14 +14,14 @@ import aaa;
  */
 public class Book extends BaseClass {
 /* SQL
-SELECT book_id,book_name,price,book_type,want_flag,length9,length10,insert_datetime,update_datetime
+SELECT book_id,book_name,price,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime
 FROM book;
 
-INSERT INTO book(book_id,book_name,price,book_type,want_flag,length9,length10,insert_datetime,update_datetime)
-VALUES(?,?,?,?,?,?,?,?,?);
+INSERT INTO book(book_id,book_name,price,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime)
+VALUES(?,?,?,?,?,?,?,?,?,?);
 
 UPDATE book
-SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,insert_datetime=?,update_datetime=?;
+SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,numeric41=?,insert_datetime=?,update_datetime=?;
 */
 
 	private static final long serialVersionUID = 1L;
@@ -33,6 +33,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,i
 	private Integer wantFlag;
 	private Integer length9;
 	private Long length10;
+	private BigDecimal numeric41;
 	private Timestamp insertDatetime;
 	private Timestamp updateDatetime;
 
@@ -195,6 +196,27 @@ SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,i
 	 */
 	public void setLength10(Long length10) {
 		this.length10 = length10;
+	}
+
+	/**
+	 * numeric41 【小数】の取得<br>
+	 * 【型】 NUMERIC(4,1)
+	 * 
+	 * @return numeric41 【小数】
+	 */
+	public BigDecimal getNumeric41() {
+		return numeric41;
+	}
+
+	/**
+	 * numeric41 【小数】のセット<br>
+	 * 【型】 NUMERIC(4,1)
+	 * 
+	 * @param numeric41
+	 *             【小数】
+	 */
+	public void setNumeric41(BigDecimal numeric41) {
+		this.numeric41 = numeric41;
 	}
 
 	/**

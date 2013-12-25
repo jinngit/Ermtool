@@ -88,7 +88,7 @@
 			<categories>
 				<category>
 					<id></id>
-					<height>223</height>
+					<height>240</height>
 					<width>377</width>
 						<font_name>Lucida Grande</font_name>
 						<font_size>9</font_size>
@@ -168,7 +168,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2013-07-26 14:44:13</creation_date>
-			<updated_date>2013-09-06 10:21:55</updated_date>
+			<updated_date>2013-12-25 19:45:40</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -209,6 +209,7 @@
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description></description>
 			<logical_name>書籍ID</logical_name>
@@ -222,6 +223,7 @@
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description></description>
 			<logical_name>書名</logical_name>
@@ -235,6 +237,7 @@
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description>1: 小説&#x0A;2: コミック&#x0A;3: 実用書</description>
 			<logical_name>書籍種別</logical_name>
@@ -248,6 +251,7 @@
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description></description>
 			<logical_name>登録日時</logical_name>
@@ -261,6 +265,7 @@
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description></description>
 			<logical_name>長さ10</logical_name>
@@ -274,6 +279,7 @@
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description></description>
 			<logical_name>長さ9</logical_name>
@@ -282,16 +288,17 @@
 		</word>
 		<word>
 			<id>6</id>
-			<length>null</length>
-			<decimal>null</decimal>
+			<length>4</length>
+			<decimal>1</decimal>
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description></description>
-			<logical_name>価格</logical_name>
-			<physical_name>price</physical_name>
-			<type>integer</type>
+			<logical_name>小数</logical_name>
+			<physical_name>numeric41</physical_name>
+			<type>numeric(p,s)</type>
 		</word>
 		<word>
 			<id>7</id>
@@ -300,6 +307,21 @@
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
+			<args></args>
+			<description></description>
+			<logical_name>価格</logical_name>
+			<physical_name>price</physical_name>
+			<type>integer</type>
+		</word>
+		<word>
+			<id>8</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description></description>
 			<logical_name>更新登録日時</logical_name>
@@ -307,12 +329,13 @@
 			<type>timestamp</type>
 		</word>
 		<word>
-			<id>8</id>
+			<id>9</id>
 			<length>1</length>
 			<decimal>null</decimal>
 			<array>false</array>
 			<array_dimension>null</array_dimension>
 			<unsigned>false</unsigned>
+			<binary>false</binary>
 			<args></args>
 			<description>1: 購入予定&#x0A;0: 購入予定なし</description>
 			<logical_name>購入予定フラグ</logical_name>
@@ -370,6 +393,7 @@
 						<max_value></max_value>
 						<start></start>
 						<cache></cache>
+						<nocache>false</nocache>
 						<cycle>false</cycle>
 						<order>false</order>
 						<description></description>
@@ -402,6 +426,7 @@
 						<max_value></max_value>
 						<start></start>
 						<cache></cache>
+						<nocache>false</nocache>
 						<cycle>false</cycle>
 						<order>false</order>
 						<description></description>
@@ -410,7 +435,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>6</word_id>
+					<word_id>7</word_id>
 					<id>4</id>
 					<description></description>
 					<unique_key_name>price</unique_key_name>
@@ -434,6 +459,7 @@
 						<max_value></max_value>
 						<start></start>
 						<cache></cache>
+						<nocache>false</nocache>
 						<cycle>false</cycle>
 						<order>false</order>
 						<description></description>
@@ -466,6 +492,7 @@
 						<max_value></max_value>
 						<start></start>
 						<cache></cache>
+						<nocache>false</nocache>
 						<cycle>false</cycle>
 						<order>false</order>
 						<description></description>
@@ -474,7 +501,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>8</word_id>
+					<word_id>9</word_id>
 					<id>6</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -498,6 +525,7 @@
 						<max_value></max_value>
 						<start></start>
 						<cache></cache>
+						<nocache>false</nocache>
 						<cycle>false</cycle>
 						<order>false</order>
 						<description></description>
@@ -530,6 +558,7 @@
 						<max_value></max_value>
 						<start></start>
 						<cache></cache>
+						<nocache>false</nocache>
 						<cycle>false</cycle>
 						<order>false</order>
 						<description></description>
@@ -562,6 +591,40 @@
 						<max_value></max_value>
 						<start></start>
 						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>6</word_id>
+					<id>9</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>numeric(p,s)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
 						<cycle>false</cycle>
 						<order>false</order>
 						<description></description>
@@ -654,6 +717,7 @@
 							<max_value></max_value>
 							<start></start>
 							<cache></cache>
+							<nocache>false</nocache>
 							<cycle>false</cycle>
 							<order>false</order>
 							<description></description>
@@ -662,7 +726,7 @@
 						</sequence>
 					</normal_column>
 					<normal_column>
-						<word_id>7</word_id>
+						<word_id>8</word_id>
 						<id>1</id>
 						<description></description>
 						<unique_key_name></unique_key_name>
@@ -686,6 +750,7 @@
 							<max_value></max_value>
 							<start></start>
 							<cache></cache>
+							<nocache>false</nocache>
 							<cycle>false</cycle>
 							<order>false</order>
 							<description></description>
@@ -707,6 +772,7 @@
 			<max_value>1234</max_value>
 			<start>12</start>
 			<cache>11</cache>
+			<nocache>false</nocache>
 			<cycle>false</cycle>
 			<order>false</order>
 			<description>なんたらかんたらのシーケンス&#x0A;改行を入れてみる。</description>
