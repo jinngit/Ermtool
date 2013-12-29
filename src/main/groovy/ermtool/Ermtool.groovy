@@ -8,13 +8,19 @@ class Ermtool {
 	static main(args) {
 		def cli = new CliBuilder(usage:"groovy Ermtool.groovy -i ermfile -t table -o output_dir")
 		cli.i(argName: 'input', required: true, args: 1, 'ERMasterの.ermファイル')
-		cli.t(argName: 'table', required: true, args: 1, '出力テーブル名')
+		cli.t(argName: 'table', required: false, args: 1, '出力テーブル名')
 		cli.o(argName: 'output', required: true, args: 1, '出力先ディレクトリ')
 		def options = cli.parse(args)
 		if (!options) return
 			def config = new ConfigSlurper().parse(new File("config/config.groovy").toURI().toURL())
 		def reader = new Ermtool(new File(options.i))
-		reader.output(config, options.t, options.o);
+		if (options.t) {
+			reader.output(config, options.t, options.o)
+		} else {
+			reader.tableMap.each { k, v ->
+				reader.output(config, k, options.o)
+			}
+		}
 	}
 
 	private def erm
