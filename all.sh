@@ -7,7 +7,6 @@ export PATH=$PATH:$GROOVY_HOME/bin
 CURRENT=$(cd $(dirname $0); pwd)
 
 export CLASSPATH=$CURRENT/src/main/groovy:$CURRENT/lib/commons-cli-1.2.jar:$CURRENT/lib/guava-14.0.1.jar:$CURRENT/lib/velocity-1.7-dep.jar
-env
 
 # -t テーブル名
 groovy  src/main/groovy/ermtool/Ermtool.groovy \
