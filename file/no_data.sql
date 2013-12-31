@@ -1,0 +1,1 @@
+CREATE SEQUENCE no_data

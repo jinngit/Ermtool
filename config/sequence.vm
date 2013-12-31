@@ -1,0 +1,7 @@
+CREATE SEQUENCE ${sequence.name}#if(${sequence.increment} != "")
+ INCREMENT ${sequence.increment}#end#if(${sequence.minValue} != "")
+ MINVALUE ${sequence.minValue}#end#if(${sequence.maxValue} != "")
+ MINVALUE ${sequence.maxValue}#end#if(${sequence.start} != "")
+ MINVALUE ${sequence.start}#end#if(${sequence.cache} != "")
+ MINVALUE ${sequence.cache}#end#if(${sequence.cycle})
+ CYCLE#end

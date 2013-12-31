@@ -169,7 +169,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2013-07-26 14:44:13</creation_date>
-			<updated_date>2013-12-29 20:58:17</updated_date>
+			<updated_date>2013-12-31 08:19:01</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -903,6 +903,21 @@
 			<cycle>false</cycle>
 			<order>false</order>
 			<description>なんたらかんたらのシーケンス&#x0A;改行を入れてみる。</description>
+			<data_type></data_type>
+			<decimal_size>0</decimal_size>
+		</sequence>
+		<sequence>
+			<name>no_data</name>
+			<schema></schema>
+			<increment></increment>
+			<min_value></min_value>
+			<max_value></max_value>
+			<start></start>
+			<cache></cache>
+			<nocache>false</nocache>
+			<cycle>false</cycle>
+			<order>false</order>
+			<description></description>
 			<data_type></data_type>
 			<decimal_size>0</decimal_size>
 		</sequence>

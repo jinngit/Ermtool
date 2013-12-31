@@ -8,17 +8,26 @@ class Ermtool {
 	static main(args) {
 		def cli = new CliBuilder(usage:"groovy Ermtool.groovy -i ermfile -t table -o output_dir")
 		cli.i(argName: 'input', required: true, args: 1, 'ERMasterの.ermファイル')
-		cli.t(argName: 'table', required: false, args: 1, '出力テーブル名')
 		cli.o(argName: 'output', required: true, args: 1, '出力先ディレクトリ')
+		cli.t(argName: 'table', required: false, args: 1, '出力テーブル名')
+		cli.s(argName: 'sequence', required: false, args: 1, '出力シーケンス名')
 		def options = cli.parse(args)
 		if (!options) return
 			def config = new ConfigSlurper().parse(new File("config/config.groovy").toURI().toURL())
 		def reader = new Ermtool(new File(options.i))
 		if (options.t) {
-			reader.output(config, options.t, options.o)
+			reader.outputTable(config, options.t, options.o)
 		} else {
 			reader.tableMap.each { k, v ->
-				reader.output(config, k, options.o)
+				reader.outputTable(config, k, options.o)
+			}
+		}
+
+		if (options.s) {
+			reader.outputSequence(config, options.s, options.o)
+		} else {
+			reader.sequenceMap.each { k, v ->
+				reader.outputSequence(config, k, options.o)
 			}
 		}
 	}
@@ -29,6 +38,7 @@ class Ermtool {
 	private def categoryMap
 	private def tableCategoryMap
 	private def tableMap
+	private def sequenceMap
 
 	Ermtool(File file) {
 		erm = new XmlSlurper().parseText(file.text)
@@ -37,9 +47,10 @@ class Ermtool {
 		initColumnGroupMap()
 		initCategoryMap()
 		initTableMap()
+		initSequenceMap()
 	}
 
-	public void output(config, target, output) {
+	public void outputTable(config, target, output) {
 		//Velocityの初期化
 		Velocity.init();
 		//Velocityコンテキストに値を設定
@@ -55,6 +66,22 @@ class Ermtool {
 		}
 		new File("${output}/${table.className}.java").withWriter { writer ->
 			def template = Velocity.getTemplate("config/entity.vm", "UTF-8");
+			//テンプレートとマージ
+			template.merge(context, writer);
+		}
+	}
+
+	public void outputSequence(config, target, output) {
+		//Velocityの初期化
+		Velocity.init();
+		//Velocityコンテキストに値を設定
+		def context = new VelocityContext()
+		def sequence = sequenceMap[target]
+		context.put("config", config)
+		context.put("sequence", sequence)
+
+		new File("${output}/${sequence.name}.sql").withWriter { writer ->
+			def template = Velocity.getTemplate("config/sequence.vm", "UTF-8");
 			//テンプレートとマージ
 			template.merge(context, writer);
 		}
@@ -94,6 +121,13 @@ class Ermtool {
 		tableMap = [:]
 		erm.contents.table.collect().each {
 			tableMap[it.physical_name.text()] = new Table(it, dictionaryMap, columnGroupMap)
+		}
+	}
+
+	private void initSequenceMap() {
+		sequenceMap = [:]
+		erm.sequence_set.sequence.collect().each {
+			sequenceMap[it.name.text()] = new Sequence(it)
 		}
 	}
 }
