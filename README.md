@@ -11,10 +11,36 @@ MIT
 付属のcommons-cli、velocity、guavaについては各ライブラリーのライセンス通りです。LICENSEフォルダに各ライブラリーのライセンスを明示しています。
 
 ## 使い方
-## Ermtoolで使用するデータ
-### テーブル
-テーブル情報のタブごとに以下の制限があります。
-TODO
+今はテーブルと、インデックス、シーケンスのみ対応しています。
+
+Groovyは動く状態だと仮定します。
+
+クラスパスはプロジェクトホームを起点として、以下のように設定します。
+
+```sh
+export CLASSPATH=\
+$CURRENT/src/main/groovy\
+:$CURRENT/lib/commons-cli-1.2.jar\
+:$CURRENT/lib/guava-14.0.1.jar\
+:$CURRENT/lib/velocity-1.7-dep.jar
+```
+
+実行の起点は、ermtool/Ermtool.groovyです。オプションとして必須なのは、iとoです。
+
+- i ERMasterで記述した定義ファイル
+- o 出力先ディレクトリ
+
+```sh
+groovy  src/main/groovy/ermtool/Ermtool.groovy \
+  -i input/test.erm \
+  -o file
+```
+
+上記のままで指定すると記述してあるすべての、テーブル、インデックス、シーケンスのDDL、JavaのEntityクラスが出力されます。
+
+限定するには、-tないし-sオプションでそれぞれテーブル名、シーケンス名を指定します。
+
+-tと-sオプションは同時に指定することはできません。
 
 ## 実行方法
 TODO
@@ -23,6 +49,7 @@ TODO
 ### 0.2.0（2013年11月4日）
 * 機能追加
  - numeric(p,s)対応
+ - sequence対応
 * バグ
  - NOT NULLの判断が逆になっていた。
 
