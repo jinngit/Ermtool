@@ -14,21 +14,26 @@ class Ermtool {
 		def options = cli.parse(args)
 		if (!options) return
 			def config = new ConfigSlurper().parse(new File("config/config.groovy").toURI().toURL())
+
+		if  (options.t && options.s) {
+			println("tとsオプションはどちらかのみ指定できます")
+			return
+		}
 		def reader = new Ermtool(new File(options.i))
 		if (options.t) {
 			reader.outputTable(config, options.t, options.o)
-		} else {
-			reader.tableMap.each { k, v ->
-				reader.outputTable(config, k, options.o)
-			}
+			return
 		}
 
 		if (options.s) {
 			reader.outputSequence(config, options.s, options.o)
-		} else {
-			reader.sequenceMap.each { k, v ->
-				reader.outputSequence(config, k, options.o)
-			}
+			return
+		}
+		reader.tableMap.each { k, v ->
+			reader.outputTable(config, k, options.o)
+		}
+		reader.sequenceMap.each { k, v ->
+			reader.outputSequence(config, k, options.o)
 		}
 	}
 
