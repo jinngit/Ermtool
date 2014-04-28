@@ -14,14 +14,14 @@ import aaa;
  */
 public class Book extends BaseClass {
 /* SQL
-SELECT book_id,book_name,price,uriage,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime
+SELECT book_id,book_name,price,uriage,zeppan,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime
 FROM book;
 
-INSERT INTO book(book_id,book_name,price,uriage,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime)
-VALUES(?,?,?,?,?,?,?,?,?,?,?);
+INSERT INTO book(book_id,book_name,price,uriage,zeppan,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime)
+VALUES(?,?,?,?,?,?,?,?,?,?,?,?);
 
 UPDATE book
-SET book_id=?,book_name=?,price=?,uriage=?,book_type=?,want_flag=?,length9=?,length10=?,numeric41=?,insert_datetime=?,update_datetime=?;
+SET book_id=?,book_name=?,price=?,uriage=?,zeppan=?,book_type=?,want_flag=?,length9=?,length10=?,numeric41=?,insert_datetime=?,update_datetime=?;
 */
 
 	private static final long serialVersionUID = 1L;
@@ -30,6 +30,7 @@ SET book_id=?,book_name=?,price=?,uriage=?,book_type=?,want_flag=?,length9=?,len
 	private String bookName;
 	private Integer price;
 	private Long uriage;
+	private Boolean zeppan;
 	private String bookType;
 	private Integer wantFlag;
 	private Integer length9;
@@ -120,6 +121,27 @@ SET book_id=?,book_name=?,price=?,uriage=?,book_type=?,want_flag=?,length9=?,len
 	 */
 	public void setUriage(Long uriage) {
 		this.uriage = uriage;
+	}
+
+	/**
+	 * zeppan 【絶版】の取得<br>
+	 * 【型】 BOOLEAN
+	 * 
+	 * @return zeppan 【絶版】
+	 */
+	public Boolean getZeppan() {
+		return zeppan;
+	}
+
+	/**
+	 * zeppan 【絶版】のセット<br>
+	 * 【型】 BOOLEAN
+	 * 
+	 * @param zeppan
+	 *             【絶版】
+	 */
+	public void setZeppan(Boolean zeppan) {
+		this.zeppan = zeppan;
 	}
 
 	/**

@@ -45,7 +45,7 @@ class Column {
 
 	private final def TYPE_MAP = ["integer" : "INTEGER",
 		"date": "DATE", "timestamp with time zone": "TIMESTAMP WITH TIME ZONE",
-		"timestamp": "TIMESTAMP", "bigint" : "BIGINT"]
+		"timestamp": "TIMESTAMP", "bigint" : "BIGINT", "boolean" : "BOOLEAN"]
 	private final def TYPE_STRING_MAP = new HashSet([
 		"char",
 		"char(n)",
@@ -132,7 +132,7 @@ class Column {
 
 	private final def JAVA_TYPE_MAP = [
 		"integer" : "Integer", "bigint": "Long" , "date": "Date", "timestamp with time zone": "Timestamp",
-		"timestamp": "Timestamp",
+		"timestamp": "Timestamp", "boolean" : "Boolean",
 		"character": "String", "character(n)": "String",
 		"varchar":"String", "varchar(n)": "String"]
 
