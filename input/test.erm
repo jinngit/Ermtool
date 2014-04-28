@@ -103,8 +103,8 @@
 					</connections>
 					<name>group</name>
 					<selected>true</selected>
-					<node_element>0</node_element>
 					<node_element>1</node_element>
+					<node_element>0</node_element>
 				</category>
 				<category>
 					<id></id>
@@ -169,7 +169,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2013-07-26 14:44:13</creation_date>
-			<updated_date>2013-12-31 08:19:01</updated_date>
+			<updated_date>2014-04-29 05:56:01</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -359,6 +359,20 @@
 		</word>
 		<word>
 			<id>11</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<binary>false</binary>
+			<args></args>
+			<description></description>
+			<logical_name>売上</logical_name>
+			<physical_name>uriage</physical_name>
+			<type>bigint</type>
+		</word>
+		<word>
+			<id>12</id>
 			<length>1</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -377,12 +391,12 @@
 	<contents>
 		<table>
 			<id>0</id>
-			<height>214</height>
-			<width>265</width>
+			<height>75</height>
+			<width>120</width>
 				<font_name>Lucida Grande</font_name>
 				<font_size>9</font_size>
-			<x>24</x>
-			<y>24</y>
+			<x>312</x>
+			<y>36</y>
 			<color>
 				<r>128</r>
 				<g>128</g>
@@ -390,15 +404,15 @@
 			</color>
 			<connections>
 			</connections>
-			<physical_name>book</physical_name>
-			<logical_name>書籍マスタ</logical_name>
-			<description>テーブルの説明&#x0A;あいうえお&#x0A;かきくけこ&#x0A;改行込みだよ</description>
+			<physical_name>author</physical_name>
+			<logical_name>著者</logical_name>
+			<description></description>
 			<constraint></constraint>
 			<primary_key_name></primary_key_name>
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>2</word_id>
+					<word_id>0</word_id>
 					<id>2</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -431,8 +445,106 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>3</word_id>
+					<word_id>1</word_id>
 					<id>3</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>varchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+			</columns>
+			<indexes>
+			</indexes>
+			<complex_unique_key_list>
+			</complex_unique_key_list>
+			<table_properties>
+				<schema></schema>
+				<without_oids>true</without_oids>
+			</table_properties>
+		</table>
+		<table>
+			<id>1</id>
+			<height>214</height>
+			<width>265</width>
+				<font_name>Lucida Grande</font_name>
+				<font_size>9</font_size>
+			<x>24</x>
+			<y>24</y>
+			<color>
+				<r>128</r>
+				<g>128</g>
+				<b>192</b>
+			</color>
+			<connections>
+			</connections>
+			<physical_name>book</physical_name>
+			<logical_name>書籍マスタ</logical_name>
+			<description>テーブルの説明&#x0A;あいうえお&#x0A;かきくけこ&#x0A;改行込みだよ</description>
+			<constraint></constraint>
+			<primary_key_name></primary_key_name>
+			<option></option>
+			<columns>
+				<normal_column>
+					<word_id>2</word_id>
+					<id>4</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>integer</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>true</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>3</word_id>
+					<id>5</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -465,7 +577,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>9</word_id>
-					<id>4</id>
+					<id>6</id>
 					<description></description>
 					<unique_key_name>price</unique_key_name>
 					<logical_name></logical_name>
@@ -497,8 +609,41 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
+					<word_id>11</word_id>
+					<id>7</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>bigint</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
 					<word_id>4</word_id>
-					<id>5</id>
+					<id>8</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -530,8 +675,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>11</word_id>
-					<id>6</id>
+					<word_id>12</word_id>
+					<id>9</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -564,7 +709,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>7</word_id>
-					<id>7</id>
+					<id>10</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -597,7 +742,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>6</word_id>
-					<id>8</id>
+					<id>11</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -630,7 +775,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>8</word_id>
-					<id>9</id>
+					<id>12</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -672,11 +817,11 @@
 					<description>テスト&#x0A;テスト</description>
 					<columns>
 						<column>
-							<id>3</id>
+							<id>5</id>
 							<desc>false</desc>
 						</column>
 						<column>
-							<id>2</id>
+							<id>4</id>
 							<desc>false</desc>
 						</column>
 					</columns>
@@ -689,11 +834,11 @@
 					<description></description>
 					<columns>
 						<column>
-							<id>4</id>
+							<id>6</id>
 							<desc>false</desc>
 						</column>
 						<column>
-							<id>2</id>
+							<id>4</id>
 							<desc>false</desc>
 						</column>
 					</columns>
@@ -705,108 +850,10 @@
 					<name>ui1</name>
 					<columns>
 						<column>
-							<id>3</id>
+							<id>5</id>
 						</column>
 					</columns>
 				</complex_unique_key>
-			</complex_unique_key_list>
-			<table_properties>
-				<schema></schema>
-				<without_oids>true</without_oids>
-			</table_properties>
-		</table>
-		<table>
-			<id>1</id>
-			<height>75</height>
-			<width>120</width>
-				<font_name>Lucida Grande</font_name>
-				<font_size>9</font_size>
-			<x>312</x>
-			<y>36</y>
-			<color>
-				<r>128</r>
-				<g>128</g>
-				<b>192</b>
-			</color>
-			<connections>
-			</connections>
-			<physical_name>author</physical_name>
-			<logical_name>著者</logical_name>
-			<description></description>
-			<constraint></constraint>
-			<primary_key_name></primary_key_name>
-			<option></option>
-			<columns>
-				<normal_column>
-					<word_id>0</word_id>
-					<id>10</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>integer</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>true</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>1</word_id>
-					<id>11</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>false</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-			</columns>
-			<indexes>
-			</indexes>
-			<complex_unique_key_list>
 			</complex_unique_key_list>
 			<table_properties>
 				<schema></schema>

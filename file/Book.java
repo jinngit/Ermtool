@@ -14,14 +14,14 @@ import aaa;
  */
 public class Book extends BaseClass {
 /* SQL
-SELECT book_id,book_name,price,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime
+SELECT book_id,book_name,price,uriage,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime
 FROM book;
 
-INSERT INTO book(book_id,book_name,price,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime)
-VALUES(?,?,?,?,?,?,?,?,?,?);
+INSERT INTO book(book_id,book_name,price,uriage,book_type,want_flag,length9,length10,numeric41,insert_datetime,update_datetime)
+VALUES(?,?,?,?,?,?,?,?,?,?,?);
 
 UPDATE book
-SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,numeric41=?,insert_datetime=?,update_datetime=?;
+SET book_id=?,book_name=?,price=?,uriage=?,book_type=?,want_flag=?,length9=?,length10=?,numeric41=?,insert_datetime=?,update_datetime=?;
 */
 
 	private static final long serialVersionUID = 1L;
@@ -29,6 +29,7 @@ SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,n
 	private Integer bookId;
 	private String bookName;
 	private Integer price;
+	private Long uriage;
 	private String bookType;
 	private Integer wantFlag;
 	private Integer length9;
@@ -98,6 +99,27 @@ SET book_id=?,book_name=?,price=?,book_type=?,want_flag=?,length9=?,length10=?,n
 	 */
 	public void setPrice(Integer price) {
 		this.price = price;
+	}
+
+	/**
+	 * uriage 【売上】の取得<br>
+	 * 【型】 BIGINT
+	 * 
+	 * @return uriage 【売上】
+	 */
+	public Long getUriage() {
+		return uriage;
+	}
+
+	/**
+	 * uriage 【売上】のセット<br>
+	 * 【型】 BIGINT
+	 * 
+	 * @param uriage
+	 *             【売上】
+	 */
+	public void setUriage(Long uriage) {
+		this.uriage = uriage;
 	}
 
 	/**

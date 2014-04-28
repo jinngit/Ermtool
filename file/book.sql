@@ -2,6 +2,7 @@ CREATE TABLE book(
   book_id INTEGER NOT NULL,
   book_name VARCHAR(80) UNIQUE NOT NULL,
   price INTEGER DEFAULT 0,
+  uriage BIGINT,
   book_type CHAR(1),
   want_flag NUMERIC(1),
   length9 NUMERIC(9),
@@ -17,6 +18,7 @@ COMMENT ON TABLE book IS '書籍マスタ';
 COMMENT ON COLUMN book.book_id IS '書籍ID';
 COMMENT ON COLUMN book.book_name IS '書名';
 COMMENT ON COLUMN book.price IS '価格';
+COMMENT ON COLUMN book.uriage IS '売上';
 COMMENT ON COLUMN book.book_type IS '書籍種別';
 COMMENT ON COLUMN book.want_flag IS '購入予定フラグ';
 COMMENT ON COLUMN book.length9 IS '長さ9';
